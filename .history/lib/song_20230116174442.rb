@@ -30,12 +30,6 @@ class Song
     # get the song ID from the database and save it to the Ruby instance
     self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
 
-    self
-  end
-
-  def self.create(name:, album:)
-    song = Song.new(name: name, album: album)
-    song.save
   end
 
 end

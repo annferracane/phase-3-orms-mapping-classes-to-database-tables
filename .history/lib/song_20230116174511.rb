@@ -31,11 +31,7 @@ class Song
     self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
 
     self
-  end
 
-  def self.create(name:, album:)
-    song = Song.new(name: name, album: album)
-    song.save
   end
 
 end
